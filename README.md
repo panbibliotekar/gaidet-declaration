@@ -20,6 +20,6 @@ If you use this tool or taxonomy in your research, please cite the following man
 
 ---
 
-## License
+## ⚖️ License
 
 © 2025 Yana Suchikova, Natalia Tsybuliak, Jaime A. Teixeira da Silva, Serhii Nazarovets – MIT License
