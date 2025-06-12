@@ -5,6 +5,25 @@ The declaration is based on the **GAIDeT taxonomy** (Generative AI Delegation Ta
 
 ---
 
+## 🧪 How it works
+
+The GAIDeT Declaration Generator is an interactive HTML tool that helps researchers declare the use of generative AI in scientific writing and publishing. Here's how to use it:
+
+1. Fill in the name of the responsible author  
+   *(or enter “Collective responsibility” if all authors share responsibility)*
+
+2. Select the relevant research and writing tasks  
+   *(based on the GAIDeT taxonomy of delegable tasks)*
+
+3. Optionally, add a short comment for clarification
+
+4. Click **“Generate”** to create the declaration
+
+5. Copy and paste the output into your manuscript’s  
+   *Methods*, *Acknowledgments*, or *CRediT* section
+
+---
+
 ## 📩 Feedback
 
 We welcome your suggestions and comments to improve the tool before public release.  
