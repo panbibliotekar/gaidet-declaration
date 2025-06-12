@@ -1,6 +1,6 @@
 # GAIDeT Declaration Generator
 
-This is a **beta version** of the GAIDeT Declaration Generator — an interactive HTML tool that helps researchers transparently disclose the use of Generative AI (GAI) tools in scientific writing and research.
+This is a **beta version** of the <a href="https://panbibliotekar.github.io/gaidet-declaration/">GAIDeT Declaration Generator</a> — an interactive HTML tool that helps researchers transparently disclose the use of Generative AI (GAI) tools in scientific writing and research.
 The declaration is based on the **GAIDeT taxonomy** (Generative AI Delegation Taxonomy), developed to promote transparency and accountability in academic publishing. It can be inserted into the *Methods*, *Acknowledgments*, or *CRediT* sections of a manuscript.
 
 ---
