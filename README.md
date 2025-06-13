@@ -18,9 +18,9 @@ The GAIDeT Declaration Generator is an interactive HTML tool that helps research
 
 3. Optionally, add a short comment for clarification
 
-4. Click **“Generate”** to create the declaration
+4. Click **“Generate”** to create a declaration that can be copied into the Methods, Acknowledgments, or CRediT section of a manuscript, or it could be supplied as a new and separate GAI use statement.
 
-5. Copy and paste the output into your manuscript as a  
+6. Copy and paste the output into your manuscript as a  
    **separate section following the CRediT author contributions**,  
    as recommended in the GAIDeT model.
 
