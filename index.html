@@ -62,6 +62,11 @@
   </div>
 
   <div class="section">
+    <h2>2. Which LLM (and version) was used?</h2>
+    <input type="text" id="llm" placeholder="e.g., ChatGPT-4.5, Claude 3, Gemini 1.5">
+  </div>
+
+  <div class="section">
     <h2>2. Select Delegated Tasks (from GAIDeT taxonomy)</h2>
 
     <details open>
@@ -78,8 +83,9 @@
     <details>
       <summary>Literature Review</summary>
       <div class="task-group">
-        <label><input type="checkbox" value="Literature search, systematization, and writing the literature review"> Literature search, systematization, and writing the literature review</label>
-        <label><input type="checkbox" value="Analysis of market trends and/or patent environment"> Analysis of market trends and/or patent environment</label>
+        <label><input type="checkbox" value="Literature search, systematization, and "> Literature search and systematization</label>
+         <label><input type="checkbox" value="Writing the literature review"> Writing the literature review</label>
+	<label><input type="checkbox" value="Analysis of market trends and/or patent environment"> Analysis of market trends and/or patent environment</label>
         <label><input type="checkbox" value="Evaluation of the novelty of the research and identification of gaps"> Evaluation of the novelty of the research and identification of gaps</label>
       </div>
     </details>
@@ -121,6 +127,7 @@
       <div class="task-group">
         <label><input type="checkbox" value="Text generation"> Text generation</label>
         <label><input type="checkbox" value="Proofreading and editing"> Proofreading and editing</label>
+	<label><input type="checkbox" value="Summarising text"> Summarising text</label>
         <label><input type="checkbox" value="Formulation of conclusions"> Formulation of conclusions</label>
         <label><input type="checkbox" value="Adapting and adjusting emotional tone"> Adapting and adjusting emotional tone</label>
         <label><input type="checkbox" value="Translation"> Translation</label>
@@ -165,6 +172,7 @@
   <script>
     function generateDeclaration() {
       const who = document.getElementById("who").value || "[unspecified]";
+      const llm = document.getElementById("llm").value.trim();
       const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
       const comment = document.getElementById("comment").value.trim();
       const selectedTasks = Array.from(checkboxes).map(cb => cb.value);
@@ -176,6 +184,10 @@
         output += "- " + selectedTasks.join("\n- ") + "\n\n";
       } else {
         output += "(No specific tasks selected)\n\n";
+      }
+
+      if (llm) {
+        output += `The GAI tool used was: ${llm}.\n`;
       }
 
       output += `Responsibility for the final manuscript lies entirely with the authors.\nGAI tools are not listed as authors and do not bear responsibility for the final outcomes.\nDeclaration submitted by: ${who}`;
