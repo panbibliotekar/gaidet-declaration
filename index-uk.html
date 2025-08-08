@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Генератор декларації GAIDeT</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #000;
+      margin: 2rem;
+      line-height: 1.6;
+    }
+    <div style="text-align:right; margin-top:-1rem; font-size:0.9rem;">
+  <a href="index.html" style="text-decoration:none; color:#000;">
+    🌐 English version
+  </a>
+</div>
+    h1, h2 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.3rem;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .task-group {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    textarea, input[type="text"] {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid #aaa;
+      font-family: monospace;
+    }
+    #output {
+      height: 400px;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin-right: 0.5rem;
+    }
+    button:hover {
+      background-color: #333;
+    }
+    label { display: block; margin-top: 0.4rem; }
+    details summary { cursor: pointer; font-weight: bold; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>🤖 Генератор декларації GAIDeT</h1>
+
+  <div class="section">
+    <p><strong>Це бета-версія</strong> Генератора декларації GAIDeT (Generative AI Delegation Taxonomy) — інтерактивного інструмента для дослідників, що допомагає розкривати делегування завдань інструментам генеративного ШІ відповідно до таксономії GAIDeT.</p>
+    <p> 📄 Докладніше про GAIDeT: Suchikova, Y., Tsybuliak, N., & Teixeira da Silva, J. A. & Nazarovets, S. (2025). GAIDeT (Generative AI Delegation Taxonomy): A taxonomy for humans to delegate tasks to generative artificial intelligence in scientific research and publishing. <i>Accountability in Research</i>i, in press. <a href="https://doi.org/10.1080/08989621.2025.2544331">https://doi.org/10.1080/08989621.2025.2544331</a></p>
+  </div>
+
+  <div class="section">
+    <h2>1. Хто делегував завдання?</h2>
+    <input type="text" id="who" placeholder="напр., Євген Промптович або ‘Колективна відповідальність’">
+  </div>
+
+  <div class="section">
+    <h2>2. Яку LLM (та версію) використано?</h2>
+    <input type="text" id="llm" placeholder="напр., ChatGPT-5, Claude 3, Gemini 1.5">
+  </div>
+
+  <div class="section">
+    <h2>3. Оберіть делеговані завдання (за таксономією GAIDeT)</h2>
+
+    <details open>
+      <summary>Концептуалізація</summary>
+      <div class="task-group">
+        <label><input type="checkbox" value="Генерування ідей"> Генерування ідей</label>
+        <label><input type="checkbox" value="Визначення мети дослідження"> Визначення мети дослідження</label>
+        <label><input type="checkbox" value="Формулювання дослідницьких питань і гіпотез"> Формулювання дослідницьких питань і гіпотез</label>
+        <label><input type="checkbox" value="Оцінювання здійсненності та ризиків"> Оцінювання здійсненності та ризиків</label>
+        <label><input type="checkbox" value="Попереднє тестування гіпотез"> Попереднє тестування гіпотез</label>
+      </div>
+    </details>
+
+    <details>
+      <summary>Огляд літератури</summary>
+      <div class="task-group">
+        <label><input type="checkbox" value="Пошук і систематизація літератури"> Пошук і систематизація літератури</label>
+        <label><input type="checkbox" value="Написання огляду літератури"> Написання огляду літератури</label>
+        <label><input type="checkbox" value="Аналіз ринкових трендів та/або патентного середовища"> Аналіз ринкових трендів та/або патентного середовища</label>
+        <label><input type="checkbox" value="Оцінювання новизни дослідження та виявлення прогалин"> Оцінювання новизни дослідження та виявлення прогалин</label>
+      </div>
+    </details>
+
+    <details>
+      <summary>Методологія</summary>
+      <div class="task-group">
+        <label><input type="checkbox" value="Дизайн дослідження"> Дизайн дослідження</label>
+        <label><input type="checkbox" value="Розроблення експериментальних або дослідницьких протоколів"> Розроблення експериментальних або дослідницьких протоколів</label>
+        <label><input type="checkbox" value="Вибір методів дослідження"> Вибір методів дослідження</label>
+      </div>
+    </details>
+
+    <details>
+      <summary>Розробка ПЗ та автоматизація</summary>
+      <div class="task-group">
+        <label><input type="checkbox" value="Генерування коду"> Генерування коду</label>
+        <label><input type="checkbox" value="Оптимізація коду"> Оптимізація коду</label>
+        <label><input type="checkbox" value="Автоматизація процесів"> Автоматизація процесів</label>
+        <label><input type="checkbox" value="Створення алгоритмів для аналізу даних"> Створення алгоритмів для аналізу даних</label>
+      </div>
+    </details>
+
+    <details>
+      <summary>Керування даними</summary>
+      <div class="task-group">
+        <label><input type="checkbox" value="Збирання даних"> Збирання даних</label>
+        <label><input type="checkbox" value="Валідація"> Валідація</label>
+        <label><input type="checkbox" value="Очищення даних"> Очищення даних</label>
+        <label><input type="checkbox" value="Курація та організація даних"> Курація та організація даних</label>
+        <label><input type="checkbox" value="Аналіз даних"> Аналіз даних</label>
+        <label><input type="checkbox" value="Візуалізація"> Візуалізація</label>
+        <label><input type="checkbox" value="Перевірка відтворюваності"> Перевірка відтворюваності</label>
+      </div>
+    </details>
+
+    <details>
+      <summary>Написання й редагування</summary>
+      <div class="task-group">
+        <label><input type="checkbox" value="Генерування тексту"> Генерування тексту</label>
+        <label><input type="checkbox" value="Вичитування та редагування"> Вичитування та редагування</label>
+        <label><input type="checkbox" value="Резюмування тексту"> Резюмування тексту</label>
+        <label><input type="checkbox" value="Формулювання висновків"> Формулювання висновків</label>
+        <label><input type="checkbox" value="Адаптація та коригування емоційного тону"> Адаптація та коригування емоційного тону</label>
+        <label><input type="checkbox" value="Переклад"> Переклад</label>
+        <label><input type="checkbox" value="Реформатування"> Реформатування</label>
+        <label><input type="checkbox" value="Підготовка пресрелізів та матеріалів для популяризації"> Підготовка пресрелізів та матеріалів для популяризації</label>
+      </div>
+    </details>
+
+    <details>
+      <summary>Етичний аналіз</summary>
+      <div class="task-group">
+        <label><input type="checkbox" value="Аналіз упередженості та потенційної дискримінації"> Аналіз упередженості та потенційної дискримінації</label>
+        <label><input type="checkbox" value="Аналіз етичних ризиків"> Аналіз етичних ризиків</label>
+        <label><input type="checkbox" value="Моніторинг дотримання етичних стандартів"> Моніторинг дотримання етичних стандартів</label>
+        <label><input type="checkbox" value="Моніторинг конфіденційності даних"> Моніторинг конфіденційності даних</label>
+      </div>
+    </details>
+
+    <details>
+      <summary>Нагляд і керівництво</summary>
+      <div class="task-group">
+        <label><input type="checkbox" value="Оцінювання якості"> Оцінювання якості</label>
+        <label><input type="checkbox" value="Виявлення трендів"> Виявлення трендів</label>
+        <label><input type="checkbox" value="Визначення обмежень"> Визначення обмежень</label>
+        <label><input type="checkbox" value="Рекомендації"> Рекомендації</label>
+        <label><input type="checkbox" value="Підтримка публікації"> Підтримка публікації</label>
+      </div>
+    </details>
+  </div>
+
+  <div class="section">
+    <h2>4. Додаткові коментарі (за бажанням)</h2>
+    <textarea id="comment" placeholder="напр., Ми використали ChatGPT-5 для допомоги у синтезі літератури..."></textarea>
+  </div>
+
+  <div class="section">
+    <h2>5. Згенерована декларація</h2>
+    <button onclick="generateDeclaration()">Згенерувати</button>
+    <textarea id="output" readonly></textarea>
+  </div>
+
+  <script>
+    function generateDeclaration() {
+      const who = document.getElementById("who").value || "[не вказано]";
+      const llm = document.getElementById("llm").value.trim();
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+      const comment = document.getElementById("comment").value.trim();
+      const selectedTasks = Array.from(checkboxes).map(cb => cb.value);
+
+      let output = `Розкриття факту делегування завдань генеративному ШІ\n\n`;
+      output += `Автори заявляють про використання генеративного ШІ у процесі дослідження та підготовки рукопису. Відповідно до таксономії GAIDeT (2025), наведені нижче завдання були делеговані інструментам генеративного ШІ за повного людського нагляду:\n\n`;
+
+      if (selectedTasks.length > 0) {
+        output += "- " + selectedTasks.join("\n- ") + "\n\n";
+      } else {
+        output += "(Не обрано жодного конкретного завдання)\n\n";
+      }
+
+      if (llm) {
+        output += `Використаний інструмент генеративного ШІ: ${llm}.\n`;
+      }
+
+      output += `Повну відповідальність за фінальний рукопис несуть автори.\nІнструменти генеративного ШІ не зазначаються як автори та не несуть відповідальності за кінцеві результати.\nДекларацію подав(ла): ${who}`;
+
+      if (comment) {
+        output += `\nДодаткова примітка: ${comment}`;
+      }
+
+      const outputField = document.getElementById("output");
+      outputField.value = output;
+      outputField.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
