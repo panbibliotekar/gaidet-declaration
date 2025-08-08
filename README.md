@@ -29,7 +29,7 @@ The GAIDeT Declaration Generator is an interactive HTML tool that helps research
 
 If you use this tool or taxonomy in your research, please cite the following manuscript:
 
-> Suchikova, Y., Tsybuliak, N., Teixeira da Silva, J.A. & Nazarovets, S. (2025). *GAIDeT (Generative AI Delegation Taxonomy): A taxonomy for humans to delegate tasks to generative artificial intelligence in scientific research and publishing*. [Manuscript in review].
+> Suchikova, Y., Tsybuliak, N., & Teixeira da Silva, J. A. & Nazarovets, S. (2025). GAIDeT (Generative AI Delegation Taxonomy): A taxonomy for humans to delegate tasks to generative artificial intelligence in scientific research and publishing. <i>Accountability in Research</i>, in press. <a href="https://doi.org/10.1080/08989621.2025.2544331">https://doi.org/10.1080/08989621.2025.2544331</a>
 
 ---
 
