@@ -1,0 +1,57 @@
+conceptualization:
+  - label: Idea generation
+  - label: Defining the research objective
+  - label: Formulating research questions and hypotheses
+  - label: Feasibility assessment and risk evaluation
+  - label: Preliminary hypothesis testing
+
+review:
+  - label: Literature search and systematization
+  - label: Writing the literature review
+  - label: Analysis of market trends and/or patent environment
+  - label:  Evaluation of the novelty of the research and identification of gaps
+
+methodology:
+  - label: Research design
+  - label: Development of experimental or research protocols
+  - label: Selection of research methods
+
+
+software:
+  - label: Code generation
+  - label: Code optimization
+  - label: Process automation
+  - label: Creation of algorithms for data analysis
+
+data:
+  - label: Data collection
+  - label: Validation
+  - label: Data cleaning
+  - label: Data curation and organization
+  - label: Data analysis
+  - label: Visualization
+  - label: Reproducibility testing
+    
+writing:
+  - label:Text generation
+  - label: Proofreading and editing
+  - label: Summarizing text
+  - label: Formulation of conclusions
+  - label: Adapting and adjusting emotional tone
+  - label: Translation
+  - label: Reformatting
+  - label: Preparation of press releases and outreach materials
+
+
+ethics:
+  - label: Bias analysis and potential discrimination assessment
+  - label: Ethical risk analysis
+  - label: Monitoring compliance with ethical standards
+  - label: Data confidentiality monitoring
+
+supervision:
+  - label: Quality assessment
+  - label: Trend identification
+  - label: Identification of limitations
+  - label: Recommendations
+  - label: Publication support

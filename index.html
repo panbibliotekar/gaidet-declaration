@@ -86,91 +86,75 @@
     <h2>3. Select Delegated Tasks (from GAIDeT taxonomy)</h2>
 
     <details open>
-      <summary>Conceptualization</summary>
-      <div class="task-group">
-        <label><input type="checkbox" value="Idea generation"> Idea generation</label>
-        <label><input type="checkbox" value="Defining the research objective"> Defining the research objective</label>
-        <label><input type="checkbox" value="Formulating research questions and hypotheses"> Formulating research questions and hypotheses</label>
-        <label><input type="checkbox" value="Feasibility assessment and risk evaluation"> Feasibility assessment and risk evaluation</label>
-        <label><input type="checkbox" value="Preliminary hypothesis testing"> Preliminary hypothesis testing</label>
-      </div>
+        <summary>Conceptualization</summary>
+        <div class="task-group">
+            {%- for element in site.data.terms.conceptualization %}
+            <label><input type="checkbox" value="{{ element.label }}">{{ element.label }}</label>
+            {%- endfor %}
+        </div>
     </details>
 
     <details>
-      <summary>Literature Review</summary>
-      <div class="task-group">
-        <label><input type="checkbox" value="Literature search, systematization, and "> Literature search and systematization</label>
-         <label><input type="checkbox" value="Writing the literature review"> Writing the literature review</label>
-	<label><input type="checkbox" value="Analysis of market trends and/or patent environment"> Analysis of market trends and/or patent environment</label>
-        <label><input type="checkbox" value="Evaluation of the novelty of the research and identification of gaps"> Evaluation of the novelty of the research and identification of gaps</label>
-      </div>
+        <summary>Literature Review</summary>
+        <div class="task-group">
+            {%- for element in site.data.terms.review %}
+            <label><input type="checkbox" value="{{ element.label }}">{{ element.label }}</label>
+            {%- endfor %}
+        </div>
     </details>
 
     <details>
-      <summary>Methodology</summary>
-      <div class="task-group">
-        <label><input type="checkbox" value="Research design"> Research design</label>
-        <label><input type="checkbox" value="Development of experimental or research protocols"> Development of experimental or research protocols</label>
-        <label><input type="checkbox" value="Selection of research methods"> Selection of research methods</label>
-      </div>
+        <summary>Methodology</summary>
+        <div class="task-group">
+            {%- for element in site.data.terms.methodology %}
+            <label><input type="checkbox" value="{{ element.label }}">{{ element.label }}</label>
+            {%- endfor %}
+        </div>
     </details>
 
     <details>
-      <summary>Software Development and Automation</summary>
-      <div class="task-group">
-        <label><input type="checkbox" value="Code generation"> Code generation</label>
-        <label><input type="checkbox" value="Code optimization"> Code optimization</label>
-        <label><input type="checkbox" value="Process automation"> Process automation</label>
-        <label><input type="checkbox" value="Creation of algorithms for data analysis"> Creation of algorithms for data analysis</label>
-      </div>
+        <summary>Software Development and Automation</summary>
+        <div class="task-group">
+            {%- for element in site.data.terms.software %}
+            <label><input type="checkbox" value="{{ element.label }}">{{ element.label }}</label>
+            {%- endfor %}
+        </div>
     </details>
 
     <details>
-      <summary>Data Management</summary>
-      <div class="task-group">
-        <label><input type="checkbox" value="Data collection"> Data collection</label>
-        <label><input type="checkbox" value="Validation"> Validation</label>
-        <label><input type="checkbox" value="Data cleaning"> Data cleaning</label>
-        <label><input type="checkbox" value="Data curation and organization"> Data curation and organization</label>
-        <label><input type="checkbox" value="Data analysis"> Data analysis</label>
-        <label><input type="checkbox" value="Visualization"> Visualization</label>
-        <label><input type="checkbox" value="Reproducibility testing"> Reproducibility testing</label>
-      </div>
+        <summary>Data Management</summary>
+        <div class="task-group">
+            {%- for element in site.data.terms.data %}
+            <label><input type="checkbox" value="{{ element.label }}">{{ element.label }}</label>
+            {%- endfor %}
+        </div>
     </details>
 
     <details>
-      <summary>Writing and Editing</summary>
-      <div class="task-group">
-        <label><input type="checkbox" value="Text generation"> Text generation</label>
-        <label><input type="checkbox" value="Proofreading and editing"> Proofreading and editing</label>
-	<label><input type="checkbox" value="Summarizing text"> Summarizing text</label>
-        <label><input type="checkbox" value="Formulation of conclusions"> Formulation of conclusions</label>
-        <label><input type="checkbox" value="Adapting and adjusting emotional tone"> Adapting and adjusting emotional tone</label>
-        <label><input type="checkbox" value="Translation"> Translation</label>
-        <label><input type="checkbox" value="Reformatting"> Reformatting</label>
-        <label><input type="checkbox" value="Preparation of press releases and outreach materials"> Preparation of press releases and outreach materials</label>
-      </div>
+        <summary>Writing and Editing</summary>
+        <div class="task-group">
+            {%- for element in site.data.terms.writing %}
+            <label><input type="checkbox" value="{{ element.label }}">{{ element.label }}</label>
+            {%- endfor %}
+        </div>
     </details>
 
     <details>
-      <summary>Ethics Review</summary>
-      <div class="task-group">
-        <label><input type="checkbox" value="Bias analysis and potential discrimination assessment"> Bias analysis and potential discrimination assessment</label>
-        <label><input type="checkbox" value="Ethical risk analysis"> Ethical risk analysis</label>
-        <label><input type="checkbox" value="Monitoring compliance with ethical standards"> Monitoring compliance with ethical standards</label>
-        <label><input type="checkbox" value="Data confidentiality monitoring"> Data confidentiality monitoring</label>
-      </div>
+        <summary>Ethics Review</summary>
+        <div class="task-group">
+            {%- for element in site.data.terms.ethics %}
+            <label><input type="checkbox" value="{{ element.label }}">{{ element.label }}</label>
+            {%- endfor %}
+        </div>
     </details>
 
     <details>
-      <summary>Supervision</summary>
-      <div class="task-group">
-        <label><input type="checkbox" value="Quality assessment"> Quality assessment</label>
-        <label><input type="checkbox" value="Trend identification"> Trend identification</label>
-        <label><input type="checkbox" value="Identification of limitations"> Identification of limitations</label>
-        <label><input type="checkbox" value="Recommendations"> Recommendations</label>
-        <label><input type="checkbox" value="Publication support"> Publication support</label>
-      </div>
+        <summary>Supervision</summary>
+        <div class="task-group">
+            {%- for element in site.data.terms.ethics %}
+            <label><input type="checkbox" value="{{ element.label }}">{{ element.label }}</label>
+            {%- endfor %}
+        </div>
     </details>
   </div>
 
