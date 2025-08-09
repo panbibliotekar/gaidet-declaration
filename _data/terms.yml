@@ -1,5 +1,5 @@
 conceptualization:
-  label: Conceptulaization
+  label: Conceptualization
   label_uk: Концептуалізація
   terms:
     - label: Idea generation
@@ -40,7 +40,7 @@ methodology:
 
 software:
   label: Software Development and Automation
-  label_uk: Розробка ПЗ та автоматизація
+  label_uk: Розробка програмного забезпечення та автоматизація
   terms:
     - label: Code generation
       label_uk: Генерування коду
