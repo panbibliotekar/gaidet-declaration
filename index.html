@@ -88,72 +88,72 @@
     <h2>3. Select Delegated Tasks (from GAIDeT taxonomy)</h2>
 
     <details open>
-        <summary>Conceptualization</summary>
+        <summary>{{ site.data.terms.conceptualization.label }}</summary>
         <div class="task-group">
-            {%- for element in site.data.terms.conceptualization %}
+            {%- for element in site.data.terms.conceptualization.terms %}
             <label><input type="checkbox" value="{{ element.label }}">{{ element.label }}</label>
             {%- endfor %}
         </div>
     </details>
 
     <details>
-        <summary>Literature Review</summary>
+        <summary>{{ site.data.terms.review.label }}</summary>
         <div class="task-group">
-            {%- for element in site.data.terms.review %}
+            {%- for element in site.data.terms.review.terms %}
             <label><input type="checkbox" value="{{ element.label }}">{{ element.label }}</label>
             {%- endfor %}
         </div>
     </details>
 
     <details>
-        <summary>Methodology</summary>
+        <summary>{{ site.data.terms.methodology.label }}</summary>
         <div class="task-group">
-            {%- for element in site.data.terms.methodology %}
+            {%- for element in site.data.terms.methodology.terms %}
             <label><input type="checkbox" value="{{ element.label }}">{{ element.label }}</label>
             {%- endfor %}
         </div>
     </details>
 
     <details>
-        <summary>Software Development and Automation</summary>
+        <summary>{{ site.data.terms.software.label }}</summary>
         <div class="task-group">
-            {%- for element in site.data.terms.software %}
+            {%- for element in site.data.terms.software.terms %}
             <label><input type="checkbox" value="{{ element.label }}">{{ element.label }}</label>
             {%- endfor %}
         </div>
     </details>
 
     <details>
-        <summary>Data Management</summary>
+        <summary>{{ site.data.terms.data.label }}</summary>
         <div class="task-group">
-            {%- for element in site.data.terms.data %}
+            {%- for element in site.data.terms.data.terms %}
             <label><input type="checkbox" value="{{ element.label }}">{{ element.label }}</label>
             {%- endfor %}
         </div>
     </details>
 
     <details>
-        <summary>Writing and Editing</summary>
+        <summary>{{ site.data.terms.writing.label }}</summary>
         <div class="task-group">
-            {%- for element in site.data.terms.writing %}
+            {%- for element in site.data.terms.writing.terms %}
             <label><input type="checkbox" value="{{ element.label }}">{{ element.label }}</label>
             {%- endfor %}
         </div>
     </details>
 
     <details>
-        <summary>Ethics Review</summary>
+        <summary>{{ site.data.terms.review.label }}</summary>
         <div class="task-group">
-            {%- for element in site.data.terms.ethics %}
+            {%- for element in site.data.terms.ethics.terms %}
             <label><input type="checkbox" value="{{ element.label }}">{{ element.label }}</label>
             {%- endfor %}
         </div>
     </details>
 
     <details>
-        <summary>Supervision</summary>
+        <summary>{{ site.data.terms.supervision.label }}</summary>
         <div class="task-group">
-            {%- for element in site.data.terms.ethics %}
+            {%- for element in site.data.terms.supervision.terms %}
             <label><input type="checkbox" value="{{ element.label }}">{{ element.label }}</label>
             {%- endfor %}
         </div>

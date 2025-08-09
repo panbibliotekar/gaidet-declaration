@@ -89,91 +89,75 @@
     <h2>3. Оберіть делеговані завдання (за таксономією GAIDeT)</h2>
 
     <details open>
-      <summary>Концептуалізація</summary>
-      <div class="task-group">
-        <label><input type="checkbox" value="Генерування ідей"> Генерування ідей</label>
-        <label><input type="checkbox" value="Визначення мети дослідження"> Визначення мети дослідження</label>
-        <label><input type="checkbox" value="Формулювання дослідницьких питань і гіпотез"> Формулювання дослідницьких питань і гіпотез</label>
-        <label><input type="checkbox" value="Оцінювання здійсненності та ризиків"> Оцінювання здійсненності та ризиків</label>
-        <label><input type="checkbox" value="Попереднє тестування гіпотез"> Попереднє тестування гіпотез</label>
-      </div>
+        <summary>{{ site.data.terms.conceptualization.label_uk }}</summary>
+        <div class="task-group">
+            {%- for element in site.data.terms.conceptualization.terms %}
+            <label><input type="checkbox" value="{{ element.label_uk }}">{{ element.label_uk }}</label>
+            {%- endfor %}
+        </div>
     </details>
 
     <details>
-      <summary>Огляд літератури</summary>
-      <div class="task-group">
-        <label><input type="checkbox" value="Пошук і систематизація літератури"> Пошук і систематизація літератури</label>
-        <label><input type="checkbox" value="Написання огляду літератури"> Написання огляду літератури</label>
-        <label><input type="checkbox" value="Аналіз ринкових трендів та/або патентного середовища"> Аналіз ринкових трендів та/або патентного середовища</label>
-        <label><input type="checkbox" value="Оцінювання новизни дослідження та виявлення прогалин"> Оцінювання новизни дослідження та виявлення прогалин</label>
-      </div>
+        <summary>{{ site.data.terms.review.label_uk }}</summary>
+        <div class="task-group">
+            {%- for element in site.data.terms.review.terms %}
+            <label><input type="checkbox" value="{{ element.label_uk }}">{{ element.label_uk }}</label>
+            {%- endfor %}
+        </div>
     </details>
 
     <details>
-      <summary>Методологія</summary>
-      <div class="task-group">
-        <label><input type="checkbox" value="Дизайн дослідження"> Дизайн дослідження</label>
-        <label><input type="checkbox" value="Розроблення експериментальних або дослідницьких протоколів"> Розроблення експериментальних або дослідницьких протоколів</label>
-        <label><input type="checkbox" value="Вибір методів дослідження"> Вибір методів дослідження</label>
-      </div>
+        <summary>{{ site.data.terms.methodology.label_uk }}</summary>
+        <div class="task-group">
+            {%- for element in site.data.terms.methodology.terms %}
+            <label><input type="checkbox" value="{{ element.label_uk }}">{{ element.label_uk }}</label>
+            {%- endfor %}
+        </div>
     </details>
 
     <details>
-      <summary>Розробка ПЗ та автоматизація</summary>
-      <div class="task-group">
-        <label><input type="checkbox" value="Генерування коду"> Генерування коду</label>
-        <label><input type="checkbox" value="Оптимізація коду"> Оптимізація коду</label>
-        <label><input type="checkbox" value="Автоматизація процесів"> Автоматизація процесів</label>
-        <label><input type="checkbox" value="Створення алгоритмів для аналізу даних"> Створення алгоритмів для аналізу даних</label>
-      </div>
+        <summary>{{ site.data.terms.software.label_uk }}</summary>
+        <div class="task-group">
+            {%- for element in site.data.terms.software.terms %}
+            <label><input type="checkbox" value="{{ element.label_uk }}">{{ element.label_uk }}</label>
+            {%- endfor %}
+        </div>
     </details>
 
     <details>
-      <summary>Керування даними</summary>
-      <div class="task-group">
-        <label><input type="checkbox" value="Збирання даних"> Збирання даних</label>
-        <label><input type="checkbox" value="Валідація"> Валідація</label>
-        <label><input type="checkbox" value="Очищення даних"> Очищення даних</label>
-        <label><input type="checkbox" value="Курація та організація даних"> Курація та організація даних</label>
-        <label><input type="checkbox" value="Аналіз даних"> Аналіз даних</label>
-        <label><input type="checkbox" value="Візуалізація"> Візуалізація</label>
-        <label><input type="checkbox" value="Перевірка відтворюваності"> Перевірка відтворюваності</label>
-      </div>
+        <summary>{{ site.data.terms.data.label_uk }}</summary>
+        <div class="task-group">
+            {%- for element in site.data.terms.data.terms %}
+            <label><input type="checkbox" value="{{ element.label_uk }}">{{ element.label_uk }}</label>
+            {%- endfor %}
+        </div>
     </details>
 
     <details>
-      <summary>Написання й редагування</summary>
-      <div class="task-group">
-        <label><input type="checkbox" value="Генерування тексту"> Генерування тексту</label>
-        <label><input type="checkbox" value="Вичитування та редагування"> Вичитування та редагування</label>
-        <label><input type="checkbox" value="Резюмування тексту"> Резюмування тексту</label>
-        <label><input type="checkbox" value="Формулювання висновків"> Формулювання висновків</label>
-        <label><input type="checkbox" value="Адаптація та коригування емоційного тону"> Адаптація та коригування емоційного тону</label>
-        <label><input type="checkbox" value="Переклад"> Переклад</label>
-        <label><input type="checkbox" value="Реформатування"> Реформатування</label>
-        <label><input type="checkbox" value="Підготовка пресрелізів та матеріалів для популяризації"> Підготовка пресрелізів та матеріалів для популяризації</label>
-      </div>
+        <summary>{{ site.data.terms.writing.label_uk }}</summary>
+        <div class="task-group">
+            {%- for element in site.data.terms.writing.terms %}
+            <label><input type="checkbox" value="{{ element.label_uk }}">{{ element.label_uk }}</label>
+            {%- endfor %}
+        </div>
     </details>
 
     <details>
-      <summary>Етичний аналіз</summary>
-      <div class="task-group">
-        <label><input type="checkbox" value="Аналіз упередженості та потенційної дискримінації"> Аналіз упередженості та потенційної дискримінації</label>
-        <label><input type="checkbox" value="Аналіз етичних ризиків"> Аналіз етичних ризиків</label>
-        <label><input type="checkbox" value="Моніторинг дотримання етичних стандартів"> Моніторинг дотримання етичних стандартів</label>
-        <label><input type="checkbox" value="Моніторинг конфіденційності даних"> Моніторинг конфіденційності даних</label>
-      </div>
+        <summary>{{ site.data.terms.review.label_uk }}</summary>
+        <div class="task-group">
+            {%- for element in site.data.terms.ethics.terms %}
+            <label><input type="checkbox" value="{{ element.label_uk }}">{{ element.label_uk }}</label>
+            {%- endfor %}
+        </div>
     </details>
 
     <details>
-      <summary>Нагляд і керівництво</summary>
-      <div class="task-group">
-        <label><input type="checkbox" value="Оцінювання якості"> Оцінювання якості</label>
-        <label><input type="checkbox" value="Виявлення трендів"> Виявлення трендів</label>
-        <label><input type="checkbox" value="Визначення обмежень"> Визначення обмежень</label>
-        <label><input type="checkbox" value="Рекомендації"> Рекомендації</label>
-        <label><input type="checkbox" value="Підтримка публікації"> Підтримка публікації</label>
-      </div>
+        <summary>{{ site.data.terms.supervision.label_uk }}</summary>
+        <div class="task-group">
+            {%- for element in site.data.terms.supervision.terms %}
+            <label><input type="checkbox" value="{{ element.label_uk }}">{{ element.label_uk }}</label>
+            {%- endfor %}
+        </div>
     </details>
   </div>
 
