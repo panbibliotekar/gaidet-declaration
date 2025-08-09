@@ -1,0 +1,120 @@
+conceptualization:
+  label: Conceptulaization
+  label_uk: Концептуалізація
+  terms:
+    - label: Idea generation
+      label_uk: Генерування ідей
+    - label: Defining the research objective
+      label_uk: Визначення мети дослідження
+    - label: Formulating research questions and hypotheses
+      label_uk: Формулювання дослідницьких питань і гіпотез
+    - label: Feasibility assessment and risk evaluation
+      label_uk: Оцінювання здійсненності та ризиків
+    - label: Preliminary hypothesis testing
+      label_uk: Попереднє тестування гіпотез
+
+review:
+  label: Literature Review
+  label_uk: Огляд літератури
+  terms:
+    - label: Literature search and systematization
+      label_uk: Пошук і систематизація літератури
+    - label: Writing the literature review
+      label_uk: Написання огляду літератури
+    - label: Analysis of market trends and/or patent environment
+      label_uk: Аналіз ринкових трендів та/або патентного середовища
+    - label: Evaluation of the novelty of the research and identification of gaps
+      label_uk: Оцінювання новизни дослідження та виявлення прогалин
+
+methodology:
+  label: Methodology
+  label_uk: Методологія
+  terms:
+    - label: Research design
+      label_uk: Дизайн дослідження
+    - label: Development of experimental or research protocols
+      label_uk: Розроблення експериментальних або дослідницьких протоколів
+    - label: Selection of research methods
+      label_uk: Вибір методів дослідження
+
+
+software:
+  label: Software Development and Automation
+  label_uk: Розробка ПЗ та автоматизація
+  terms:
+    - label: Code generation
+      label_uk: Генерування коду
+    - label: Code optimization
+      label_uk: Оптимізація коду
+    - label: Process automation
+      label_uk: Автоматизація процесів
+    - label: Creation of algorithms for data analysis
+      label_uk: Створення алгоритмів для аналізу даних
+
+data:
+  label: Data Management
+  label_uk: Керування даними
+  terms:
+    - label: Data collection
+      label_uk: Збирання даних
+    - label: Validation
+      label_uk: Валідація
+    - label: Data cleaning
+      label_uk: Очищення даних
+    - label: Data curation and organization
+      label_uk: Курація та організація даних
+    - label: Data analysis
+      label_uk: Аналіз даних
+    - label: Visualization
+      label_uk: Візуалізація
+    - label: Reproducibility testing
+      label_uk: Перевірка відтворюваності
+
+writing:
+  label: Writing and Editing
+  label_uk: Написання й редагування
+  terms:
+    - label: Text generation
+      label_uk: Генерування тексту
+    - label: Proofreading and editing
+      label_uk: Вичитування та редагування
+    - label: Summarizing text
+      label_uk: Резюмування тексту
+    - label: Formulation of conclusions
+      label_uk: Формулювання висновків
+    - label: Adapting and adjusting emotional tone
+      label_uk: Адаптація та коригування емоційного тону
+    - label: Translation
+      label_uk: Переклад
+    - label: Reformatting
+      label_uk: Реформатування
+    - label: Preparation of press releases and outreach materials
+      label_uk: Підготовка пресрелізів та матеріалів для популяризації
+
+ethics:
+  label: Ethics Review
+  label_uk: Етичний аналіз
+  terms:
+    - label: Bias analysis and potential discrimination assessment
+      label_uk: Аналіз упередженості та потенційної дискримінації
+    - label: Ethical risk analysis
+      label_uk: Аналіз етичних ризиків
+    - label: Monitoring compliance with ethical standards
+      label_uk: Моніторинг дотримання етичних стандартів
+    - label: Data confidentiality monitoring
+      label_uk: Моніторинг конфіденційності даних
+
+supervision:
+  label: Supervision
+  label_uk: Нагляд і керівництво
+  terms:
+    - label: Quality assessment
+      label_uk: Оцінювання якості
+    - label: Trend identification
+      label_uk: Виявлення трендів
+    - label: Identification of limitations
+      label_uk: Визначення обмежень
+    - label: Recommendations
+      label_uk: Рекомендації
+    - label: Publication support
+      label_uk: Підтримка публікації
