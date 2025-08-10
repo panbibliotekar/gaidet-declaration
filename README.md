@@ -31,6 +31,8 @@ If you use this tool or taxonomy in your research, please cite the following man
 
 > Suchikova, Y., Tsybuliak, N., & Teixeira da Silva, J. A. & Nazarovets, S. (2025). GAIDeT (Generative AI Delegation Taxonomy): A taxonomy for humans to delegate tasks to generative artificial intelligence in scientific research and publishing. <i>Accountability in Research</i>, in press. <a href="https://doi.org/10.1080/08989621.2025.2544331">https://doi.org/10.1080/08989621.2025.2544331</a>
 
+📬 Full text available on  <a href="https://www.researchgate.net/publication/394419819_GAIDeT_Generative_AI_Delegation_Taxonomy_A_taxonomy_for_humans_to_delegate_tasks_to_generative_artificial_intelligence_in_scientific_research_and_publishing">request via ResearchGate</a>.
+
 ---
 
 ## 📩 Feedback
