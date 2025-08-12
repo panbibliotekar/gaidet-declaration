@@ -38,7 +38,7 @@ If you use this tool or taxonomy in your research, please cite the following man
 ## 📩 Feedback
 
 We welcome your suggestions and comments to improve the tool before public release.  
-Contact us at: **serhii.nazarovets@gmail.com**
+Contact us at: **serhii.nazarovets@gmail.com**; **yanasuchikova@gmail.com**
 
 ---
 
