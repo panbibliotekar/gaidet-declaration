@@ -1,120 +1,175 @@
 conceptualization:
+  id: 0000001
   label: Conceptualization
   label_uk: Концептуалізація
+  credit: https://credit.niso.org/contributor-roles/conceptualization
   terms:
-    - label: Idea generation
+    - id: 0000002
+      label: Idea generation
       label_uk: Генерування ідей
-    - label: Defining the research objective
+    - id: 0000003
+      label: Defining the research objective
       label_uk: Визначення мети дослідження
-    - label: Formulating research questions and hypotheses
+    - id: 0000004
+      label: Formulating research questions and hypotheses
       label_uk: Формулювання дослідницьких питань і гіпотез
-    - label: Feasibility assessment and risk evaluation
+    - id: 0000005
+      label: Feasibility assessment and risk evaluation
       label_uk: Оцінювання здійсненності та ризиків
-    - label: Preliminary hypothesis testing
+    - id: 0000006
+      label: Preliminary hypothesis testing
       label_uk: Попереднє тестування гіпотез
 
 review:
   label: Literature Review
   label_uk: Огляд літератури
+  id: 0000007
   terms:
-    - label: Literature search and systematization
+    - id: 0000008
+      label: Literature search and systematization
       label_uk: Пошук і систематизація літератури
-    - label: Writing the literature review
+    - id: 0000009
+      label: Writing the literature review
       label_uk: Написання огляду літератури
-    - label: Analysis of market trends and/or patent environment
+    - id: 0000010
+      label: Analysis of market trends and/or patent environment
       label_uk: Аналіз ринкових трендів та/або патентного середовища
-    - label: Evaluation of the novelty of the research and identification of gaps
+    - id: 0000011
+      label: Evaluation of the novelty of the research and identification of gaps
       label_uk: Оцінювання новизни дослідження та виявлення прогалин
 
 methodology:
   label: Methodology
   label_uk: Методологія
+  credit: https://credit.niso.org/contributor-roles/methodology
+  id: 0000012
   terms:
-    - label: Research design
+    - id: 0000013
+      label: Research design
       label_uk: Дизайн дослідження
-    - label: Development of experimental or research protocols
+    - id: 0000014
+      label: Development of experimental or research protocols
       label_uk: Розроблення експериментальних або дослідницьких протоколів
-    - label: Selection of research methods
+    - id: 0000015
+      label: Selection of research methods
       label_uk: Вибір методів дослідження
 
 
 software:
+  id: 0000016
   label: Software Development and Automation
   label_uk: Розробка програмного забезпечення та автоматизація
+  credit: https://credit.niso.org/contributor-roles/software
   terms:
-    - label: Code generation
+    - id: 0000017
+      label: Code generation
       label_uk: Генерування коду
-    - label: Code optimization
+    - id: 0000018
+      label: Code optimization
       label_uk: Оптимізація коду
-    - label: Process automation
+    - id: 0000019
+      label: Process automation
       label_uk: Автоматизація процесів
-    - label: Creation of algorithms for data analysis
+    - id: 0000020
+      label: Creation of algorithms for data analysis
       label_uk: Створення алгоритмів для аналізу даних
 
 data:
+  id: 0000021
   label: Data Management
   label_uk: Керування даними
   terms:
-    - label: Data collection
+    - id: 0000022
+      label: Data collection
       label_uk: Збирання даних
-    - label: Validation
+    - id: 0000023
+      label: Validation
       label_uk: Валідація
-    - label: Data cleaning
+    - id: 0000024
+      label: Data cleaning
       label_uk: Очищення даних
-    - label: Data curation and organization
+    - id: 0000025
+      label: Data curation and organization
       label_uk: Курація та організація даних
-    - label: Data analysis
+      credit: https://credit.niso.org/contributor-roles/data-curation
+    - id: 0000026
+      label: Data analysis
       label_uk: Аналіз даних
-    - label: Visualization
+    - id: 0000027
+      label: Visualization
       label_uk: Візуалізація
-    - label: Reproducibility testing
+    - id: 0000028
+      label: Reproducibility testing
       label_uk: Перевірка відтворюваності
 
 writing:
+  id: 0000029
   label: Writing and Editing
   label_uk: Написання й редагування
   terms:
-    - label: Text generation
+    - id: 0000030
+      label: Text generation
       label_uk: Генерування тексту
-    - label: Proofreading and editing
+      credit: credit:writing-original-draft
+    - id: 0000031
+      label: Proofreading and editing
       label_uk: Вичитування та редагування
-    - label: Summarizing text
+      credit: https://credit.niso.org/contributor-roles/writing-review-editing
+    - id: 0000032
+      label: Summarizing text
       label_uk: Резюмування тексту
-    - label: Formulation of conclusions
+    - id: 0000033
+      label: Formulation of conclusions
       label_uk: Формулювання висновків
-    - label: Adapting and adjusting emotional tone
+    - id: 0000034
+      label: Adapting and adjusting emotional tone
       label_uk: Адаптація та коригування емоційного тону
-    - label: Translation
+    - id: 0000035
+      label: Translation
       label_uk: Переклад
-    - label: Reformatting
+    - id: 0000036
+      label: Reformatting
       label_uk: Реформатування
-    - label: Preparation of press releases and outreach materials
+    - id: 0000037
+      label: Preparation of press releases and outreach materials
       label_uk: Підготовка пресрелізів та матеріалів для популяризації
 
 ethics:
+  id: 0000038
   label: Ethics Review
   label_uk: Етичний аналіз
   terms:
-    - label: Bias analysis and potential discrimination assessment
+    - id: 0000039
+      label: Bias analysis and potential discrimination assessment
       label_uk: Аналіз упередженості та потенційної дискримінації
-    - label: Ethical risk analysis
+    - id: 0000040
+      label: Ethical risk analysis
       label_uk: Аналіз етичних ризиків
-    - label: Monitoring compliance with ethical standards
+    - id: 0000041
+      label: Monitoring compliance with ethical standards
       label_uk: Моніторинг дотримання етичних стандартів
-    - label: Data confidentiality monitoring
+    - id: 0000042
+      label: Data confidentiality monitoring
       label_uk: Моніторинг конфіденційності даних
 
 supervision:
+  id: 0000043
   label: Supervision
   label_uk: Нагляд і керівництво
+  credit: https://credit.niso.org/contributor-roles/supervision
   terms:
-    - label: Quality assessment
+    - id: 0000044
+      label: Quality assessment
       label_uk: Оцінювання якості
-    - label: Trend identification
+    - id: 0000045
+      label: Trend identification
       label_uk: Виявлення трендів
-    - label: Identification of limitations
+    - id: 0000046
+      label: Identification of limitations
       label_uk: Визначення обмежень
-    - label: Recommendations
+    - id: 0000047
+      label: Recommendations
       label_uk: Рекомендації
-    - label: Publication support
+    - id: 0000048
+      label: Publication support
       label_uk: Підтримка публікації
