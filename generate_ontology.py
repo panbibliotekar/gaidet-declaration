@@ -21,7 +21,6 @@ from pyobo.struct.typedef import exact_match, has_ontology_root_term
 
 HERE = Path(__file__).parent.resolve()
 TERMS_PATH = HERE.joinpath("_data", "terms.yml")
-OBO_PATH = HERE.joinpath("gaidet.obo")
 OWL_PATH = HERE.joinpath("gaidet.owl")
 
 CURIE_PREFIX = "gaidet"
@@ -77,7 +76,6 @@ def main() -> None:
         typedefs=[exact_match, has_ontology_root_term],
         root_terms=[ROOT],
     )
-    ontology.write_obo(OBO_PATH)
     ontology.write_owl(OWL_PATH)
 
 
