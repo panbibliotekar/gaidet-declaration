@@ -1,0 +1,524 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/biopragmatics/resources/gaidet/gaidet.ofn#"
+     xml:base="https://w3id.org/biopragmatics/resources/gaidet/gaidet.ofn"
+     xmlns:CRO="http://purl.obolibrary.org/obo/CRO_"
+     xmlns:IAO="http://purl.obolibrary.org/obo/IAO_"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:credit="https://credit.niso.org/contributor-roles/"
+     xmlns:gaidet="https://w3id.org/gaidet/"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/biopragmatics/resources/gaidet/gaidet.ofn">
+        <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <dcterms:description>An extension/complement to Contributor Roles Taxonomy and the Contributor Roles Ontology for generative artificial intelligence.</dcterms:description>
+        <doap:repository rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/panbibliotekar/gaidet-declaration</doap:repository>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000700 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000700">
+        <rdfs:label>has ontology root term</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#repository -->
+
+    <owl:AnnotationProperty rdf:about="http://usefulinc.com/ns/doap#repository"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
+        <rdfs:label>exact match</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CRO_0000000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CRO_0000000">
+        <rdfs:label>contributor role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000001 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <rdfs:label>Conceptualization</rdfs:label>
+        <skos:exactMatch rdf:resource="https://credit.niso.org/contributor-roles/conceptualization"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000002 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000002">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000001"/>
+        <rdfs:label>Idea generation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000003 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000003">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000001"/>
+        <rdfs:label>Defining the research objective</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000004 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000004">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000001"/>
+        <rdfs:label>Formulating research questions and hypotheses</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000005 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000005">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000001"/>
+        <rdfs:label>Feasibility assessment and risk evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000006 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000006">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000001"/>
+        <rdfs:label>Preliminary hypothesis testing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000007 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <rdfs:label>Literature Review</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000008 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000008">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000007"/>
+        <rdfs:label>Literature search and systematization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000009 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000009">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000007"/>
+        <rdfs:label>Writing the literature review</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000010 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000010">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000007"/>
+        <rdfs:label>Analysis of market trends and/or patent environment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000011 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000011">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000007"/>
+        <rdfs:label>Evaluation of the novelty of the research and identification of gaps</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000012 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <rdfs:label>Methodology</rdfs:label>
+        <skos:exactMatch rdf:resource="https://credit.niso.org/contributor-roles/methodology"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000013 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000013">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000012"/>
+        <rdfs:label>Research design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000014 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000014">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000012"/>
+        <rdfs:label>Development of experimental or research protocols</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000015 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000015">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000012"/>
+        <rdfs:label>Selection of research methods</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000016 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <rdfs:label>Software Development and Automation</rdfs:label>
+        <skos:exactMatch rdf:resource="https://credit.niso.org/contributor-roles/software"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000017 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000017">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000016"/>
+        <rdfs:label>Code generation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000018 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000018">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000016"/>
+        <rdfs:label>Code optimization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000019 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000019">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000016"/>
+        <rdfs:label>Process automation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000020 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000020">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000016"/>
+        <rdfs:label>Creation of algorithms for data analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000021 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <rdfs:label>Data Management</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000022 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000022">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000021"/>
+        <rdfs:label>Data collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000023 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000023">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000021"/>
+        <rdfs:label>Validation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000024 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000024">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000021"/>
+        <rdfs:label>Data cleaning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000025 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000025">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000021"/>
+        <rdfs:label>Data curation and organization</rdfs:label>
+        <skos:exactMatch rdf:resource="https://credit.niso.org/contributor-roles/data-curation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000026 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000026">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000021"/>
+        <rdfs:label>Data analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000027 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000027">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000021"/>
+        <rdfs:label>Visualization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000028 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000028">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000021"/>
+        <rdfs:label>Reproducibility testing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000029 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <rdfs:label>Writing and Editing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000030 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000030">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000029"/>
+        <rdfs:label>Text generation</rdfs:label>
+        <skos:exactMatch rdf:resource="https://credit.niso.org/contributor-roles/writing-original-draft"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000031 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000031">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000029"/>
+        <rdfs:label>Proofreading and editing</rdfs:label>
+        <skos:exactMatch rdf:resource="https://credit.niso.org/contributor-roles/writing-review-editing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000032 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000032">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000029"/>
+        <rdfs:label>Summarizing text</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000033 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000033">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000029"/>
+        <rdfs:label>Formulation of conclusions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000034 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000034">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000029"/>
+        <rdfs:label>Adapting and adjusting emotional tone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000035 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000035">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000029"/>
+        <rdfs:label>Translation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000036 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000036">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000029"/>
+        <rdfs:label>Reformatting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000037 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000037">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000029"/>
+        <rdfs:label>Preparation of press releases and outreach materials</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000038 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <rdfs:label>Ethics Review</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000039 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000039">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000038"/>
+        <rdfs:label>Bias analysis and potential discrimination assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000040 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000040">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000038"/>
+        <rdfs:label>Ethical risk analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000041 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000041">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000038"/>
+        <rdfs:label>Monitoring compliance with ethical standards</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000042 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000042">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000038"/>
+        <rdfs:label>Data confidentiality monitoring</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000043 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000043">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <rdfs:label>Supervision</rdfs:label>
+        <skos:exactMatch rdf:resource="https://credit.niso.org/contributor-roles/supervision"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000044 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000044">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000043"/>
+        <rdfs:label>Quality assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000045 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000045">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000043"/>
+        <rdfs:label>Trend identification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000046 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000046">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000043"/>
+        <rdfs:label>Identification of limitations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000047 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000047">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000043"/>
+        <rdfs:label>Recommendations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000048 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000048">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000043"/>
+        <rdfs:label>Publication support</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+
