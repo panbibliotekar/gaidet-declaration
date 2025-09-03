@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/biopragmatics/resources/gaidet/gaidet.ofn#"
-     xml:base="https://w3id.org/biopragmatics/resources/gaidet/gaidet.ofn"
+<rdf:RDF xmlns="https://w3id.org/gaidet/gaidet.owl#"
+     xml:base="https://w3id.org/gaidet/gaidet.owl"
      xmlns:CRO="http://purl.obolibrary.org/obo/CRO_"
      xmlns:IAO="http://purl.obolibrary.org/obo/IAO_"
      xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -14,7 +14,7 @@
      xmlns:credit="https://credit.niso.org/contributor-roles/"
      xmlns:gaidet="https://w3id.org/gaidet/"
      xmlns:dcterms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://w3id.org/biopragmatics/resources/gaidet/gaidet.ofn">
+    <owl:Ontology rdf:about="https://w3id.org/gaidet/gaidet.owl">
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
         <dcterms:description>An extension/complement to Contributor Roles Taxonomy and the Contributor Roles Ontology for generative artificial intelligence.</dcterms:description>
         <doap:repository rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/panbibliotekar/gaidet-declaration</doap:repository>

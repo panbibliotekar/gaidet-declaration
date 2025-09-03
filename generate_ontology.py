@@ -26,6 +26,7 @@ OWL_PATH = HERE.joinpath("gaidet.owl")
 CURIE_PREFIX = "gaidet"
 URI_PREFIX = "https://w3id.org/gaidet/"  # TODO need PURL scheme
 
+ONTOLOGY_IRI = "https://w3id.org/gaidet/gaidet.owl"
 NAME = "Generative Artificial Intelligence Delegation Taxonomy"
 DESCRIPTION = "An extension/complement to Contributor Roles Taxonomy and the Contributor Roles Ontology for generative artificial intelligence."
 REPOSITORY = "https://github.com/panbibliotekar/gaidet-declaration"
@@ -76,6 +77,7 @@ def main() -> None:
         terms=terms,
         typedefs=[exact_match, has_ontology_root_term],
         root_terms=[ROOT],
+        ontology_iri=ONTOLOGY_IRI,
     )
     ontology.write_owl(OWL_PATH)
 
