@@ -5,6 +5,8 @@ conceptualization:
   mappings:
     - predicate: "skos:exactMatch"
       object: "credit:conceptualization"
+      mapping_justification: "semapv:ManualMappingCuration"
+      contributor: "orcid:0000-0003-4423-4370"
   terms:
     - id: "0000002"
       label: Idea generation
@@ -47,6 +49,8 @@ methodology:
   mappings:
     - predicate: "skos:exactMatch"
       object: "credit:methodology"
+      mapping_justification: "semapv:ManualMappingCuration"
+      contributor: "orcid:0000-0003-4423-4370"
   terms:
     - id: "0000013"
       label: Research design
@@ -66,6 +70,8 @@ software:
   mappings:
     - predicate: "skos:exactMatch"
       object: "credit:software"
+      mapping_justification: "semapv:ManualMappingCuration"
+      contributor: "orcid:0000-0003-4423-4370"
   terms:
     - id: "0000017"
       label: Code generation
@@ -100,6 +106,8 @@ data:
       mappings:
         - predicate: "skos:exactMatch"
           object: "credit:data-curation"
+          mapping_justification: "semapv:ManualMappingCuration"
+          contributor: "orcid:0000-0003-4423-4370"
     - id: "0000026"
       label: Data analysis
       label_uk: Аналіз даних
@@ -121,12 +129,16 @@ writing:
       mappings:
         - predicate: "skos:exactMatch"
           object: "credit:writing-original-draft"
+          mapping_justification: "semapv:ManualMappingCuration"
+          contributor: "orcid:0000-0003-4423-4370"
     - id: "0000031"
       label: Proofreading and editing
       label_uk: Вичитування та редагування
       mappings:
         - predicate: "skos:exactMatch"
           object: "credit:writing-review-editing"
+          mapping_justification: "semapv:ManualMappingCuration"
+          contributor: "orcid:0000-0003-4423-4370"
     - id: "0000032"
       label: Summarizing text
       label_uk: Резюмування тексту
@@ -171,6 +183,8 @@ supervision:
   mappings:
     - predicate: "skos:exactMatch"
       object: "credit:supervision"
+      mapping_justification: "semapv:ManualMappingCuration"
+      contributor: "orcid:0000-0003-4423-4370"
   terms:
     - id: "0000044"
       label: Quality assessment

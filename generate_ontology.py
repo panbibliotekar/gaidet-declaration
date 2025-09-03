@@ -16,8 +16,14 @@ import bioregistry
 import click
 import yaml
 
-from pyobo import Reference, Term, build_ontology
-from pyobo.struct.typedef import exact_match, has_ontology_root_term, label
+from pyobo import Annotation, Reference, Term, build_ontology
+from pyobo.struct.typedef import (
+    exact_match,
+    has_contributor,
+    has_ontology_root_term,
+    label,
+    mapping_has_justification,
+)
 
 HERE = Path(__file__).parent.resolve()
 TERMS_PATH = HERE.joinpath("_data", "terms.yml")
@@ -37,7 +43,17 @@ def _annotate_mappings(term: Term, record) -> None:
     for mapping in record.get("mappings", []):
         predicate = Reference.from_curie(mapping["predicate"])
         obj = Reference.from_curie(mapping["object"])
-        term.annotate_object(predicate, obj)
+        term.annotate_object(
+            predicate,
+            obj,
+            annotations=[
+                Annotation(
+                    mapping_has_justification,
+                    Reference.from_curie(mapping["mapping_justification"]),
+                ),
+                Annotation(has_contributor, Reference.from_curie(mapping["contributor"])),
+            ],
+        )
 
 
 @click.command()
@@ -75,7 +91,13 @@ def main() -> None:
     ontology = build_ontology(
         prefix=CURIE_PREFIX,
         terms=terms,
-        typedefs=[exact_match, has_ontology_root_term],
+        typedefs=[
+            exact_match,
+            has_ontology_root_term,
+            mapping_has_justification,
+            label,
+            has_contributor,
+        ],
         root_terms=[ROOT],
         ontology_iri=ONTOLOGY_IRI,
     )
