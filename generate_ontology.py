@@ -17,7 +17,7 @@ import click
 import yaml
 
 from pyobo import Reference, Term, build_ontology
-from pyobo.struct.typedef import exact_match, has_ontology_root_term
+from pyobo.struct.typedef import exact_match, has_ontology_root_term, label
 
 HERE = Path(__file__).parent.resolve()
 TERMS_PATH = HERE.joinpath("_data", "terms.yml")
@@ -57,8 +57,8 @@ def main() -> None:
         term = Term(
             reference=Reference(prefix=CURIE_PREFIX, identifier=record["id"], name=record["label"])
         )
+        term.annotate_string(label, record["label_uk"], language="uk")
         term.append_parent(ROOT)
-        # TODO add ukranian label
         _annotate_mappings(term, record)
         terms.append(term)
 
@@ -66,6 +66,7 @@ def main() -> None:
             child_term = Term.from_triple(
                 prefix=CURIE_PREFIX, identifier=child["id"], name=child["label"]
             )
+            child_term.annotate_string(label, child["label_uk"], language="uk")
             child_term.append_parent(term)
             _annotate_mappings(child_term, child)
             terms.append(child_term)
