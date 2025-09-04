@@ -1,8 +1,23 @@
 # GAIDeT Declaration Generator
 
+[![w3id.org permanent identifier](https://img.shields.io/badge/w3id.org-gaidet-blue)](https://w3id.org/gaidet/)
+
 This is a **beta version** of the <a href="https://panbibliotekar.github.io/gaidet-declaration/">GAIDeT Declaration Generator</a> — an interactive HTML tool that helps researchers transparently disclose the use of Generative AI (GAI) tools in scientific writing and research.
 The declaration is based on the **GAIDeT taxonomy** (Generative AI Delegation Taxonomy), developed to promote transparency and accountability in academic publishing. 
 We recommend presenting the generated statement as a separate section immediately following the CRediT authorship contributions, in line with the model proposed in our manuscript. This ensures clear delineation between human and AI contributions in the research workflow.
+
+---
+
+## Resources
+
+- **Permanent identifier (PURL):** https://w3id.org/gaidet/  
+- **Ontology (OWL):** [gaidet.owl](https://w3id.org/gaidet/gaidet.owl)  
+- **Source taxonomy (YAML):** [terms.yml](https://w3id.org/gaidet/terms.yml)  
+- **Interactive generator (HTML):** [index.html](https://panbibliotekar.github.io/gaidet-declaration/)
+
+All GAIDeT terms are resolvable as URIs, e.g.  
+- Text generation → https://w3id.org/gaidet/0000030  
+- Data analysis → https://w3id.org/gaidet/0000026  
 
 ---
 
