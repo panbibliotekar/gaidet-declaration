@@ -1,0 +1,649 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/gaidet/gaidet.owl#"
+     xml:base="https://w3id.org/gaidet/gaidet.owl"
+     xmlns:CRO="http://purl.obolibrary.org/obo/CRO_"
+     xmlns:IAO="http://purl.obolibrary.org/obo/IAO_"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:orcid="https://orcid.org/"
+     xmlns:sssom="https://w3id.org/sssom/"
+     xmlns:credit="https://credit.niso.org/contributor-roles/"
+     xmlns:gaidet="https://w3id.org/gaidet/"
+     xmlns:semapv="https://w3id.org/semapv/vocab/"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/gaidet/gaidet.owl">
+        <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <dcterms:description>An extension/complement to Contributor Roles Taxonomy and the Contributor Roles Ontology for generative artificial intelligence.</dcterms:description>
+        <doap:repository rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/panbibliotekar/gaidet-declaration</doap:repository>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000700 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000700">
+        <rdfs:label>has ontology root term</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor">
+        <rdfs:label>contributor</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#repository -->
+
+    <owl:AnnotationProperty rdf:about="http://usefulinc.com/ns/doap#repository"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+        <rdfs:label>has label</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
+        <rdfs:label>exact match</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- https://w3id.org/sssom/mapping_justification -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/sssom/mapping_justification">
+        <rdfs:label>mapping justification</rdfs:label>
+        <rdfs:range rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CRO_0000000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CRO_0000000">
+        <rdfs:label>contributor role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000001 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <rdfs:label>Conceptualization</rdfs:label>
+        <rdfs:label xml:lang="uk">Концептуалізація</rdfs:label>
+        <skos:exactMatch rdf:resource="https://credit.niso.org/contributor-roles/conceptualization"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/gaidet/0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <owl:annotatedTarget rdf:resource="https://credit.niso.org/contributor-roles/conceptualization"/>
+        <dcterms:contributor rdf:resource="https://orcid.org/0000-0003-4423-4370"/>
+        <sssom:mapping_justification rdf:resource="https://w3id.org/semapv/vocab/ManualMappingCuration"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000002 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000002">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000001"/>
+        <rdfs:label>Idea generation</rdfs:label>
+        <rdfs:label xml:lang="uk">Генерування ідей</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000003 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000003">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000001"/>
+        <rdfs:label>Defining the research objective</rdfs:label>
+        <rdfs:label xml:lang="uk">Визначення мети дослідження</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000004 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000004">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000001"/>
+        <rdfs:label>Formulating research questions and hypotheses</rdfs:label>
+        <rdfs:label xml:lang="uk">Формулювання дослідницьких питань і гіпотез</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000005 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000005">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000001"/>
+        <rdfs:label>Feasibility assessment and risk evaluation</rdfs:label>
+        <rdfs:label xml:lang="uk">Оцінювання здійсненності та ризиків</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000006 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000006">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000001"/>
+        <rdfs:label>Preliminary hypothesis testing</rdfs:label>
+        <rdfs:label xml:lang="uk">Попереднє тестування гіпотез</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000007 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <rdfs:label>Literature Review</rdfs:label>
+        <rdfs:label xml:lang="uk">Огляд літератури</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000008 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000008">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000007"/>
+        <rdfs:label>Literature search and systematization</rdfs:label>
+        <rdfs:label xml:lang="uk">Пошук і систематизація літератури</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000009 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000009">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000007"/>
+        <rdfs:label>Writing the literature review</rdfs:label>
+        <rdfs:label xml:lang="uk">Написання огляду літератури</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000010 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000010">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000007"/>
+        <rdfs:label>Analysis of market trends and/or patent environment</rdfs:label>
+        <rdfs:label xml:lang="uk">Аналіз ринкових трендів та/або патентного середовища</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000011 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000011">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000007"/>
+        <rdfs:label>Evaluation of the novelty of the research and identification of gaps</rdfs:label>
+        <rdfs:label xml:lang="uk">Оцінювання новизни дослідження та виявлення прогалин</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000012 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <rdfs:label>Methodology</rdfs:label>
+        <rdfs:label xml:lang="uk">Методологія</rdfs:label>
+        <skos:exactMatch rdf:resource="https://credit.niso.org/contributor-roles/methodology"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/gaidet/0000012"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <owl:annotatedTarget rdf:resource="https://credit.niso.org/contributor-roles/methodology"/>
+        <dcterms:contributor rdf:resource="https://orcid.org/0000-0003-4423-4370"/>
+        <sssom:mapping_justification rdf:resource="https://w3id.org/semapv/vocab/ManualMappingCuration"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000013 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000013">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000012"/>
+        <rdfs:label>Research design</rdfs:label>
+        <rdfs:label xml:lang="uk">Дизайн дослідження</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000014 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000014">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000012"/>
+        <rdfs:label>Development of experimental or research protocols</rdfs:label>
+        <rdfs:label xml:lang="uk">Розроблення експериментальних або дослідницьких протоколів</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000015 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000015">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000012"/>
+        <rdfs:label>Selection of research methods</rdfs:label>
+        <rdfs:label xml:lang="uk">Вибір методів дослідження</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000016 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <rdfs:label>Software Development and Automation</rdfs:label>
+        <rdfs:label xml:lang="uk">Розробка програмного забезпечення та автоматизація</rdfs:label>
+        <skos:exactMatch rdf:resource="https://credit.niso.org/contributor-roles/software"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/gaidet/0000016"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <owl:annotatedTarget rdf:resource="https://credit.niso.org/contributor-roles/software"/>
+        <dcterms:contributor rdf:resource="https://orcid.org/0000-0003-4423-4370"/>
+        <sssom:mapping_justification rdf:resource="https://w3id.org/semapv/vocab/ManualMappingCuration"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000017 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000017">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000016"/>
+        <rdfs:label>Code generation</rdfs:label>
+        <rdfs:label xml:lang="uk">Генерування коду</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000018 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000018">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000016"/>
+        <rdfs:label>Code optimization</rdfs:label>
+        <rdfs:label xml:lang="uk">Оптимізація коду</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000019 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000019">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000016"/>
+        <rdfs:label>Process automation</rdfs:label>
+        <rdfs:label xml:lang="uk">Автоматизація процесів</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000020 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000020">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000016"/>
+        <rdfs:label>Creation of algorithms for data analysis</rdfs:label>
+        <rdfs:label xml:lang="uk">Створення алгоритмів для аналізу даних</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000021 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <rdfs:label>Data Management</rdfs:label>
+        <rdfs:label xml:lang="uk">Керування даними</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000022 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000022">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000021"/>
+        <rdfs:label>Data collection</rdfs:label>
+        <rdfs:label xml:lang="uk">Збирання даних</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000023 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000023">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000021"/>
+        <rdfs:label>Validation</rdfs:label>
+        <rdfs:label xml:lang="uk">Валідація</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000024 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000024">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000021"/>
+        <rdfs:label>Data cleaning</rdfs:label>
+        <rdfs:label xml:lang="uk">Очищення даних</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000025 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000025">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000021"/>
+        <rdfs:label>Data curation and organization</rdfs:label>
+        <rdfs:label xml:lang="uk">Курація та організація даних</rdfs:label>
+        <skos:exactMatch rdf:resource="https://credit.niso.org/contributor-roles/data-curation"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/gaidet/0000025"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <owl:annotatedTarget rdf:resource="https://credit.niso.org/contributor-roles/data-curation"/>
+        <dcterms:contributor rdf:resource="https://orcid.org/0000-0003-4423-4370"/>
+        <sssom:mapping_justification rdf:resource="https://w3id.org/semapv/vocab/ManualMappingCuration"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000026 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000026">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000021"/>
+        <rdfs:label>Data analysis</rdfs:label>
+        <rdfs:label xml:lang="uk">Аналіз даних</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000027 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000027">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000021"/>
+        <rdfs:label>Visualization</rdfs:label>
+        <rdfs:label xml:lang="uk">Візуалізація</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000028 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000028">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000021"/>
+        <rdfs:label>Reproducibility testing</rdfs:label>
+        <rdfs:label xml:lang="uk">Перевірка відтворюваності</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000029 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <rdfs:label>Writing and Editing</rdfs:label>
+        <rdfs:label xml:lang="uk">Написання й редагування</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000030 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000030">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000029"/>
+        <rdfs:label>Text generation</rdfs:label>
+        <rdfs:label xml:lang="uk">Генерування тексту</rdfs:label>
+        <skos:exactMatch rdf:resource="https://credit.niso.org/contributor-roles/writing-original-draft"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/gaidet/0000030"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <owl:annotatedTarget rdf:resource="https://credit.niso.org/contributor-roles/writing-original-draft"/>
+        <dcterms:contributor rdf:resource="https://orcid.org/0000-0003-4423-4370"/>
+        <sssom:mapping_justification rdf:resource="https://w3id.org/semapv/vocab/ManualMappingCuration"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000031 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000031">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000029"/>
+        <rdfs:label>Proofreading and editing</rdfs:label>
+        <rdfs:label xml:lang="uk">Вичитування та редагування</rdfs:label>
+        <skos:exactMatch rdf:resource="https://credit.niso.org/contributor-roles/writing-review-editing"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/gaidet/0000031"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <owl:annotatedTarget rdf:resource="https://credit.niso.org/contributor-roles/writing-review-editing"/>
+        <dcterms:contributor rdf:resource="https://orcid.org/0000-0003-4423-4370"/>
+        <sssom:mapping_justification rdf:resource="https://w3id.org/semapv/vocab/ManualMappingCuration"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000032 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000032">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000029"/>
+        <rdfs:label>Summarizing text</rdfs:label>
+        <rdfs:label xml:lang="uk">Резюмування тексту</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000033 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000033">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000029"/>
+        <rdfs:label>Formulation of conclusions</rdfs:label>
+        <rdfs:label xml:lang="uk">Формулювання висновків</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000034 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000034">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000029"/>
+        <rdfs:label>Adapting and adjusting emotional tone</rdfs:label>
+        <rdfs:label xml:lang="uk">Адаптація та коригування емоційного тону</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000035 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000035">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000029"/>
+        <rdfs:label>Translation</rdfs:label>
+        <rdfs:label xml:lang="uk">Переклад</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000036 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000036">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000029"/>
+        <rdfs:label>Reformatting</rdfs:label>
+        <rdfs:label xml:lang="uk">Реформатування</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000037 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000037">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000029"/>
+        <rdfs:label>Preparation of press releases and outreach materials</rdfs:label>
+        <rdfs:label xml:lang="uk">Підготовка пресрелізів та матеріалів для популяризації</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000038 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <rdfs:label>Ethics Review</rdfs:label>
+        <rdfs:label xml:lang="uk">Етичний аналіз</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000039 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000039">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000038"/>
+        <rdfs:label>Bias analysis and potential discrimination assessment</rdfs:label>
+        <rdfs:label xml:lang="uk">Аналіз упередженості та потенційної дискримінації</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000040 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000040">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000038"/>
+        <rdfs:label>Ethical risk analysis</rdfs:label>
+        <rdfs:label xml:lang="uk">Аналіз етичних ризиків</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000041 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000041">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000038"/>
+        <rdfs:label>Monitoring compliance with ethical standards</rdfs:label>
+        <rdfs:label xml:lang="uk">Моніторинг дотримання етичних стандартів</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000042 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000042">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000038"/>
+        <rdfs:label>Data confidentiality monitoring</rdfs:label>
+        <rdfs:label xml:lang="uk">Моніторинг конфіденційності даних</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000043 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000043">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
+        <rdfs:label>Supervision</rdfs:label>
+        <rdfs:label xml:lang="uk">Нагляд і керівництво</rdfs:label>
+        <skos:exactMatch rdf:resource="https://credit.niso.org/contributor-roles/supervision"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/gaidet/0000043"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <owl:annotatedTarget rdf:resource="https://credit.niso.org/contributor-roles/supervision"/>
+        <dcterms:contributor rdf:resource="https://orcid.org/0000-0003-4423-4370"/>
+        <sssom:mapping_justification rdf:resource="https://w3id.org/semapv/vocab/ManualMappingCuration"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000044 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000044">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000043"/>
+        <rdfs:label>Quality assessment</rdfs:label>
+        <rdfs:label xml:lang="uk">Оцінювання якості</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000045 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000045">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000043"/>
+        <rdfs:label>Trend identification</rdfs:label>
+        <rdfs:label xml:lang="uk">Виявлення трендів</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000046 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000046">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000043"/>
+        <rdfs:label>Identification of limitations</rdfs:label>
+        <rdfs:label xml:lang="uk">Визначення обмежень</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000047 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000047">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000043"/>
+        <rdfs:label>Recommendations</rdfs:label>
+        <rdfs:label xml:lang="uk">Рекомендації</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gaidet/0000048 -->
+
+    <owl:Class rdf:about="https://w3id.org/gaidet/0000048">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gaidet/0000043"/>
+        <rdfs:label>Publication support</rdfs:label>
+        <rdfs:label xml:lang="uk">Підтримка публікації</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+

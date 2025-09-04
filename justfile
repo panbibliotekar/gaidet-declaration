@@ -4,3 +4,6 @@ serve:
 
 format:
   npx prettier --prose-wrap always --check "**/*.html" --write
+
+build:
+  uv run generate_ontology.py
