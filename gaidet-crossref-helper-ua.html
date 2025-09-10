@@ -46,7 +46,7 @@
     <tbody id="tbody"><!-- rows injected by JS --></tbody>
   </table>
 
-  <h2>3) Перегляд останнього Explanation</h2>
+  <h2>3) Перегляд Explanation</h2>
   <textarea id="preview" readonly></textarea>
   <p class="muted"><p>
 <h5>Текст для <em>Explanation</em> генерується автоматично як універсальний шаблон із підставленою назвою конкретної задачі GAIDeT.  
@@ -110,7 +110,7 @@
     ].map(t => ({ ...t, href: `https://w3id.org/gaidet/${t.id}` }));
 
     function copyText(text){ navigator.clipboard.writeText(text); }
-    function copyById(id){ const v = document.getElementById(id).value; copyText(v); alert('Copied: ' + v); }
+    function copyById(id){ const v = document.getElementById(id).value; copyText(v); }
 
     function makeRow(task, idx){
       const tr = document.createElement('tr');
@@ -145,7 +145,6 @@ GAI tools are not listed as authors and do not bear responsibility for the final
 Declaration submitted by: [unspecified]`;
       copyText(text);
       document.getElementById('preview').value = text;
-      alert('Explanation copied to clipboard.');
     }
 
     (function init(){
