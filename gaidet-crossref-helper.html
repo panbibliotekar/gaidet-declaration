@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>GAIDeT Crossref Assertion Helper</title>
+  <style>
+    body{font-family:'Segoe UI',Tahoma,sans-serif;margin:2rem;line-height:1.6;background:#fff;color:#000}
+    h1{border-bottom:1px solid #ccc;padding-bottom:.3rem}
+    h2{margin-top:1.6rem}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+    input[type="text"]{width:100%;padding:.4rem;border:1px solid #bbb;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+    table{width:100%;border-collapse:collapse;margin-top:1rem}
+    th,td{border:1px solid #ccc;padding:.5rem;text-align:left;vertical-align:top}
+    th{background:#f7f7f7}
+    button{padding:.4rem .7rem;background:#000;color:#fff;border:none;cursor:pointer;transition:background-color .15s ease}
+    button:hover{background:#333}
+    .actions button{margin:.1rem 0}
+    textarea{width:100%;height:220px;margin-top:.6rem;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+    .muted{color:#666;font-size:.95rem}
+    .tip{background:#fffbdd;border:1px solid #f1e6a6;padding:.3rem .5rem;border-radius:6px}
+    /* subtle feedback on copy */
+    button.copied{background:#28a745 !important;color:#fff !important}
+  </style>
+</head>
+<body>
+  <h1>🤖 GAIDeT Crossref Assertion Helper</h1>
+  <p>Copy values into the <strong><a href="https://apps.crossref.org/webDeposit/">Crossref Web Deposit Form</a> → Custom Metadata (assertion)</strong>. Leave <em>Group label</em> and <em>Group name</em> empty.</p>
+
+  <h2>1) Fixed Name</h2>
+  <p class="muted">Use the same <code class="mono">Name</code> for all assertions:</p>
+  <div style="display:grid;grid-template-columns:1fr auto;gap:.6rem;max-width:720px">
+    <input id="name" class="mono" type="text" value="gaidet_ai_contrib" readonly/>
+    <button onclick="copyById('name', this)">Copy Name</button>
+  </div>
+
+  <h2>2) Task table (Label • href • Explanation)</h2>
+  <p class="tip">Pick the needed <em>Label</em> and <em>href</em>, hit <strong>Copy</strong>, then paste into the corresponding fields in the Crossref Web Deposit Form.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width:32%">Label</th>
+        <th style="width:38%">href (GAIDeT URI)</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"><!-- rows injected by JS --></tbody>
+  </table>
+
+  <h2>3) Explanation preview</h2>
+  <textarea id="preview" readonly></textarea>
+  <p class="tip"><strong>Note on the Explanation field:</strong> the text is generated automatically as a universal template with the selected GAIDeT task inserted. It’s meant to help you fill the <a href="https://apps.crossref.org/webDeposit/">Crossref Web Deposit Form</a> quickly. You <strong>don’t have to paste the entire text</strong> as-is — please feel free to <strong>shorten or edit</strong> it. Treat it as a starting point for disclosure, not a strict requirement.</p>
+  
+  <script>
+    // Full list of micro-tasks and IDs from your OWL fragment; hrefs are composed as w3id URIs.
+    const TASKS = [
+      { id:'0000001', label:'Conceptualization' },
+      { id:'0000002', label:'Idea generation' },
+      { id:'0000003', label:'Defining the research objective' },
+      { id:'0000004', label:'Formulating research questions and hypotheses' },
+      { id:'0000005', label:'Feasibility assessment and risk evaluation' },
+      { id:'0000006', label:'Preliminary hypothesis testing' },
+      { id:'0000007', label:'Literature Review' },
+      { id:'0000008', label:'Literature search and systematization' },
+      { id:'0000009', label:'Writing the literature review' },
+      { id:'0000010', label:'Analysis of market trends and/or patent environment' },
+      { id:'0000011', label:'Evaluation of the novelty of the research and identification of gaps' },
+      { id:'0000012', label:'Methodology' },
+      { id:'0000013', label:'Research design' },
+      { id:'0000014', label:'Development of experimental or research protocols' },
+      { id:'0000015', label:'Selection of research methods' },
+      { id:'0000016', label:'Software Development and Automation' },
+      { id:'0000017', label:'Code generation' },
+      { id:'0000018', label:'Code optimization' },
+      { id:'0000019', label:'Process automation' },
+      { id:'0000020', label:'Creation of algorithms for data analysis' },
+      { id:'0000021', label:'Data Management' },
+      { id:'0000022', label:'Data collection' },
+      { id:'0000023', label:'Validation' },
+      { id:'0000024', label:'Data cleaning' },
+      { id:'0000025', label:'Data curation and organization' },
+      { id:'0000026', label:'Data analysis' },
+      { id:'0000027', label:'Visualization' },
+      { id:'0000028', label:'Reproducibility testing' },
+      { id:'0000029', label:'Writing and Editing' },
+      { id:'0000030', label:'Text generation' },
+      { id:'0000031', label:'Proofreading and editing' },
+      { id:'0000032', label:'Summarizing text' },
+      { id:'0000033', label:'Formulation of conclusions' },
+      { id:'0000034', label:'Adapting and adjusting emotional tone' },
+      { id:'0000035', label:'Translation' },
+      { id:'0000036', label:'Reformatting' },
+      { id:'0000037', label:'Preparation of press releases and outreach materials' },
+      { id:'0000038', label:'Ethics Review' },
+      { id:'0000039', label:'Bias analysis and potential discrimination assessment' },
+      { id:'0000040', label:'Ethical risk analysis' },
+      { id:'0000041', label:'Monitoring compliance with ethical standards' },
+      { id:'0000042', label:'Data confidentiality monitoring' },
+      { id:'0000043', label:'Supervision' },
+      { id:'0000044', label:'Quality assessment' },
+      { id:'0000045', label:'Trend identification' },
+      { id:'0000046', label:'Identification of limitations' },
+      { id:'0000047', label:'Recommendations' },
+      { id:'0000048', label:'Publication support' }
+    ].map(t => ({ ...t, href: `https://w3id.org/gaidet/${t.id}` }));
+
+    function copyText(text){ navigator.clipboard.writeText(text); }
+
+    // Subtle, non-blocking feedback on copy
+    function flashButton(btn){
+      if(!btn) return;
+      btn.classList.add('copied');
+      const old = btn.textContent;
+      btn.textContent = '✓ Copied!';
+      setTimeout(()=>{ btn.classList.remove('copied'); btn.textContent = old; }, 1200);
+    }
+
+    function copyById(id, btn){
+      const v = document.getElementById(id).value;
+      copyText(v);
+      flashButton(btn);
+    }
+
+    function makeRow(task, idx){
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td><input id="label_${idx}" type="text" value="${escapeHtml(task.label)}"/></td>
+        <td><input id="href_${idx}"  type="text" value="${escapeHtml(task.href)}"/></td>
+        <td class="actions">
+          <button onclick="copyById('label_${idx}', this)">Copy Label</button>
+          <button onclick="copyById('href_${idx}', this)">Copy href</button>
+          <button onclick="copyExplanation(${idx}, this)">Copy Explanation</button>
+        </td>
+      `;
+      return tr;
+    }
+
+    function escapeHtml(str){
+      return (str ?? '').toString()
+        .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+        .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function copyExplanation(idx, btn){
+      const label = document.getElementById('label_'+idx).value.trim() || '[unspecified task]';
+      const text = `Disclosure of Delegation to Generative AI
+
+The authors declare the use of generative AI in the research and writing process. According to the GAIDeT taxonomy (2025), the following task was delegated to GAI tools under full human supervision:
+
+- ${label}
+
+Responsibility for the final manuscript lies entirely with the authors.
+GAI tools are not listed as authors and do not bear responsibility for the final outcomes.`;
+      copyText(text);
+      document.getElementById('preview').value = text;
+      flashButton(btn);
+    }
+
+    (function init(){
+      const tb = document.getElementById('tbody');
+      TASKS.forEach((t,i)=> tb.appendChild(makeRow(t,i+1)));
+    })();
+  </script>
+</body>
+</html>
