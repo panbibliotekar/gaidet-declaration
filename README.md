@@ -40,6 +40,18 @@ The GAIDeT Declaration Generator is an interactive HTML tool that helps research
 
 ---
 
+## 🔗 Crossref Assertion Helper
+
+We have also developed the **GAIDeT Crossref Assertion Helper** — an interactive tool to simplify adding GAIDeT disclosures into Crossref metadata via Crossmark assertions.  
+
+👉 English version: [gaidet-crossref-helper.html](https://panbibliotekar.github.io/gaidet-declaration/gaidet-crossref-helper.html)  
+👉 Ukrainian version: [gaidet-crossref-helper-ua.html](https://panbibliotekar.github.io/gaidet-declaration/gaidet-crossref-helper-ua.html)  
+
+📖 Full instruction with XML and Web Deposit Form examples is available here:  
+[How to integrate GAIDeT into Crossref metadata via Crossmark (PDF)](https://doi.org/10.5281/zenodo.17093858)  
+
+---
+
 ## 📄 Citation
 
 If you use this tool or taxonomy in your research, please cite the following manuscript:
