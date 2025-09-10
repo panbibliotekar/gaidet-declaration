@@ -13,12 +13,13 @@
     table{width:100%;border-collapse:collapse;margin-top:1rem}
     th,td{border:1px solid #ccc;padding:.5rem;text-align:left;vertical-align:top}
     th{background:#f7f7f7}
-    button{padding:.4rem .7rem;background:#000;color:#fff;border:none;cursor:pointer}
+    button{padding:.4rem .7rem;background:#000;color:#fff;border:none;cursor:pointer;transition:background-color .15s ease}
     button:hover{background:#333}
     .actions button{margin:.1rem 0}
     textarea{width:100%;height:220px;margin-top:.6rem;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
     .muted{color:#666;font-size:.95rem}
     .tip{background:#fffbdd;border:1px solid #f1e6a6;padding:.3rem .5rem;border-radius:6px}
+    button.copied{background:#28a745 !important;color:#fff !important}
   </style>
 </head>
 <body>
@@ -29,7 +30,7 @@
   <p class="muted">Для всіх assertions використовуйте однаковий <code class="mono">Name</code>:</p>
   <div style="display:grid;grid-template-columns:1fr auto;gap:.6rem;max-width:720px">
     <input id="name" class="mono" type="text" value="gaidet_ai_contrib" readonly/>
-    <button onclick="copyById('name')">Copy Name</button>
+    <button onclick="copyById('name', this)">Copy Name</button>
   </div>
 
   <h2>2) Таблиця задач (Label • href • Explanation)</h2>
@@ -105,7 +106,21 @@
     ].map(t => ({ ...t, href: `https://w3id.org/gaidet/${t.id}` }));
 
     function copyText(text){ navigator.clipboard.writeText(text); }
-    function copyById(id){ const v = document.getElementById(id).value; copyText(v); }
+
+    // ✅ тихий фідбек: кнопка зеленіє й показує "✓ Copied!" ~1.2с
+    function flashButton(btn){
+      if(!btn) return;
+      btn.classList.add('copied');
+      const old = btn.textContent;
+      btn.textContent = '✓ Copied!';
+      setTimeout(()=>{ btn.classList.remove('copied'); btn.textContent = old; }, 1200);
+    }
+
+    function copyById(id, btn){
+      const v = document.getElementById(id).value;
+      copyText(v);
+      flashButton(btn);
+    }
 
     function makeRow(task, idx){
       const tr = document.createElement('tr');
@@ -113,9 +128,9 @@
         <td><input id="label_${idx}" type="text" value="${escapeHtml(task.label)}"/></td>
         <td><input id="href_${idx}"  type="text" value="${escapeHtml(task.href)}"/></td>
         <td class="actions">
-          <button onclick="copyById('label_${idx}')">Copy Label</button>
-          <button onclick="copyById('href_${idx}')">Copy href</button>
-          <button onclick="copyExplanation(${idx})">Copy Explanation</button>
+          <button onclick="copyById('label_${idx}', this)">Copy Label</button>
+          <button onclick="copyById('href_${idx}', this)">Copy href</button>
+          <button onclick="copyExplanation(${idx}, this)">Copy Explanation</button>
         </td>
       `;
       return tr;
@@ -127,7 +142,7 @@
         .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
     }
 
-    function copyExplanation(idx){
+    function copyExplanation(idx, btn){
       const label = document.getElementById('label_'+idx).value.trim() || '[unspecified task]';
       const text = `Disclosure of Delegation to Generative AI
 
@@ -140,6 +155,7 @@ GAI tools are not listed as authors and do not bear responsibility for the final
 Declaration submitted by: [unspecified]`;
       copyText(text);
       document.getElementById('preview').value = text;
+      flashButton(btn);
     }
 
     (function init(){
