@@ -48,7 +48,7 @@ We have also developed the **GAIDeT Crossref Assertion Helper** — an interacti
 👉 Ukrainian version: [gaidet-crossref-helper-ua.html](https://panbibliotekar.github.io/gaidet-declaration/gaidet-crossref-helper-ua.html)  
 
 📖 Full instruction with XML and Web Deposit Form examples is available here:  
-[How to integrate GAIDeT into Crossref metadata via Crossmark (PDF)](https://doi.org/10.5281/zenodo.17093858)  
+[Instruction for Editors and Depositors: How to Integrate GAIDeT into Crossref Metadata via Crossmark (PDF)](https://doi.org/10.5281/zenodo.17101228)  
 
 ---
 
